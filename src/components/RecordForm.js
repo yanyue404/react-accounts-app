@@ -10,6 +10,10 @@ export default class Recordform extends Component {
       amount: ""
     };
   }
+  componentWillReceiveProps(nextProps) {
+    console.log("RecordForm’s componentWillReceiveProps", nextProps);
+  }
+
   handleChange(event) {
     let name, obj;
     name = event.target.name;
@@ -44,7 +48,7 @@ export default class Recordform extends Component {
       >
         <div className="form-group mr-1">
           <input
-            type="text"
+            type="date"
             className="form-control"
             onChange={this.handleChange.bind(this)}
             placeholder="Date"

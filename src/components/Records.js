@@ -74,7 +74,6 @@ class Records extends Component {
   }
 
   balance() {
-    // ä½é¢
     return this.credits() + this.debits();
   }
 

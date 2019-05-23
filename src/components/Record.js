@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import * as RecordsAPI from "../utils/RecordsAPI";
+import { parseCtime } from "../filter";
 
 export default class Record extends Component {
   constructor() {
@@ -8,6 +9,9 @@ export default class Record extends Component {
     this.state = {
       edit: false
     };
+  }
+  componentWillReceiveProps(nextProps) {
+    console.log("Record's componentWillReceiveProps", nextProps);
   }
   handleEdit(event) {
     event.preventDefault();
@@ -40,7 +44,7 @@ export default class Record extends Component {
   recordRow() {
     return (
       <tr>
-        <td>{this.props.record.date}</td>
+        <td>{parseCtime(this.props.record.date)}</td>
         <td>{this.props.record.title}</td>
         <td>{this.props.record.amount}</td>
         <td>
