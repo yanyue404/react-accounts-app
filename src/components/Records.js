@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Record from "./Record";
 import RecordForm from "./RecordForm";
 import AmountBox from "./AmountBox";
-import * as RecordsAPI from "../utils/RecordsAPI";
+import * as RecordsAPI from "../api/index";
 
 class Records extends Component {
   constructor() {

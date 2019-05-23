@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import * as RecordsAPI from "../utils/RecordsAPI";
+import * as RecordsAPI from "../api/index";
 import { parseCtime } from "../filter";
 
 export default class Record extends Component {

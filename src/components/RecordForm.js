@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as RecordsAPI from "../utils/RecordsAPI";
+import * as RecordsAPI from "../api/index";
 
 export default class Recordform extends Component {
   constructor(props) {

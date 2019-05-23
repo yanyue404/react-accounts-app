@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "小型财务管理系统",
   "keywords": [],
-  "main": "src/index.js",
+  "main": "src/app.js",
   "dependencies": {
     "axios": "0.18.0",
     "react": "16.8.6",
