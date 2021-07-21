@@ -10,7 +10,7 @@ class Records extends Component {
     this.state = {
       error: null,
       isLoaded: false,
-      records: []
+      records: [],
     };
   }
 
@@ -18,17 +18,15 @@ class Records extends Component {
     this.setState({
       error: null,
       isLoaded: true,
-      records: [...this.state.records, record]
+      records: [...this.state.records, record],
     });
   }
 
   deleteRecord(record) {
     const recordIndex = this.state.records.indexOf(record);
-    const newRecords = this.state.records.filter(
-      (item, index) => index !== recordIndex
-    );
+    const newRecords = this.state.records.filter((item, index) => index !== recordIndex);
     this.setState({
-      records: newRecords
+      records: newRecords,
     });
   }
 
@@ -43,17 +41,17 @@ class Records extends Component {
       // Otherwise, this is the one we want - return an updated value
       return {
         ...item,
-        ...data
+        ...data,
       };
     });
     this.setState({
-      records: newRecords
+      records: newRecords,
     });
   }
 
   credits() {
     // æ¶å¥
-    let credits = this.state.records.filter(record => {
+    let credits = this.state.records.filter((record) => {
       return record.amount >= 0;
     });
 
@@ -64,7 +62,7 @@ class Records extends Component {
 
   debits() {
     // æ¯åº
-    let credits = this.state.records.filter(record => {
+    let credits = this.state.records.filter((record) => {
       return record.amount < 0;
     });
 
@@ -79,16 +77,16 @@ class Records extends Component {
 
   componentDidMount() {
     RecordsAPI.getAll()
-      .then(reponse =>
+      .then((reponse) =>
         this.setState({
           records: reponse.data,
-          isLoaded: true
+          isLoaded: true,
         })
       )
-      .catch(error =>
+      .catch((error) =>
         this.setState({
           isLoaded: true,
-          error
+          error,
         })
       );
   }
