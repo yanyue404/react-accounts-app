@@ -4,6 +4,13 @@
   "description": "小型财务管理系统",
   "keywords": [],
   "main": "src/app.js",
+  "scripts": {
+    "dev": "yarn start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -26,13 +33,6 @@
     "lint-staged": "^11.0.1",
     "prettier": "^2.3.2",
     "typescript": "3.3.3"
-  },
-  "scripts": {
-    "dev": "yarn start",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
   },
   "browserslist": [
     ">0.2%",
