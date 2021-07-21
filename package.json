@@ -10,7 +10,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "prettier": "prettier --write \"**/*.{js,jsx,vue,css,html,scss,md,json,wxml,wxss,wxs}",
+    "prettier": "prettier --write \"**/*.{js,jsx,vue,css,html,scss,md,json,wxml,wxss,wxs}"
   },
   "pre-commit": [
     "prettier"
