@@ -1,6 +1,11 @@
 // console.log((new Date(dateStr)).formate("yyyy-MM-dd"))
 // (new Date()).formate("yyyy-MM-dd hh:mm:ss")   ==>  2018-07-18 10:01:49
 /* eslint-disable */
+
+
+
+
+
 Date.prototype.formate = function(format) {
   const o = {
     "M+": this.getMonth() + 1, // month
