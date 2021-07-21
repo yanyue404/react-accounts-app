@@ -2,11 +2,7 @@
 // (new Date()).formate("yyyy-MM-dd hh:mm:ss")   ==>  2018-07-18 10:01:49
 /* eslint-disable */
 
-
-
-
-
-Date.prototype.formate = function(format) {
+Date.prototype.formate = function (format) {
   const o = {
     "M+": this.getMonth() + 1, // month
     "d+": this.getDate(), // day
@@ -14,15 +10,12 @@ Date.prototype.formate = function(format) {
     "m+": this.getMinutes(), // minute
     "s+": this.getSeconds(), // second
     "q+": Math.floor((this.getMonth() + 3) / 3), // quarter
-    S: this.getMilliseconds()
+    S: this.getMilliseconds(),
     // millisecond
   };
 
   if (/(y+)/.test(format)) {
-    format = format.replace(
-      RegExp.$1,
-      `${this.getFullYear()}`.substr(4 - RegExp.$1.length)
-    );
+    format = format.replace(RegExp.$1, `${this.getFullYear()}`.substr(4 - RegExp.$1.length));
   }
 
   for (const k in o) {
@@ -39,10 +32,7 @@ Date.prototype.formate = function(format) {
 
 export function parseCtime(str, showHoursMinutes) {
   var temp = str;
-  if (
-    (typeof temp === "string" && str.length === 10) ||
-    (typeof temp === "number" && temp.toString().length === 10)
-  ) {
+  if ((typeof temp === "string" && str.length === 10) || (typeof temp === "number" && temp.toString().length === 10)) {
     temp = Number(str) * 1000;
   }
   if (String(str).indexOf("-") != -1) {
