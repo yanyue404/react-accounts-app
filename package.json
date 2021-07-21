@@ -13,13 +13,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-push": "lint-staged"
     }
   },
   "lint-staged": {
     "**/*.{js,jsx,vue,css,html,scss,md,json,wxml,wxss,wxs}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "dependencies": {
