@@ -4,6 +4,17 @@
   "description": "小型财务管理系统",
   "keywords": [],
   "main": "src/app.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "dependencies": {
     "axios": "0.18.0",
     "react": "16.8.6",
@@ -11,6 +22,9 @@
     "react-scripts": "2.1.8"
   },
   "devDependencies": {
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.1",
+    "prettier": "^2.3.2",
     "typescript": "3.3.3"
   },
   "scripts": {
