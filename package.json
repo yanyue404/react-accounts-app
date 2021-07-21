@@ -10,8 +10,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged"
+    "lint-staged": "lint-staged"
   },
+  "pre-commit": "lint-staged",
   "lint-staged": {
     "*.{js,jsx,vue,css,html,scss,md,json,wxml,wxss,wxs}": [
       "prettier --write",

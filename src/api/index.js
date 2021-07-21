@@ -5,30 +5,6 @@ const api =
 
 export const getAll = () => axios.get(`${api}/api/v1/records`);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const create = (body) => axios.post(`${api}/api/v1/records`, body);
 
 export const update = (id, body) =>
