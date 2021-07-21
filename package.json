@@ -9,16 +9,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "lint-staged"
-    }
+    "eject": "react-scripts eject",
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "**/*.{js,jsx,vue,css,html,scss,md,json,wxml,wxss,wxs}": [
-      "prettier --write"
+      "prettier --write",
+      "git add"
     ]
   },
   "dependencies": {
